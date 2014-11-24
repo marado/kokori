@@ -1,0 +1,81 @@
+BODY {
+    background-color: #000000;
+    background-image:url('bg.png');
+	font-family: "Courier New", Courier, monospace;
+    color: #FFFFFF;
+}
+
+a {
+	color: red;
+}
+
+a:hover { 
+    color: black; 
+    background-color: red;
+} 
+
+img {
+	border: none;
+}
+
+.link {
+    color: red;
+}
+
+.link:hover {
+    color: black;
+    background-color: red;
+}
+
+.header {
+	position: absolute;
+	top: 5%;
+	height: 10%;
+	width: 99%;
+	text-align: center;
+	font-size: xx-large;
+}
+
+.main {
+	position: absolute;
+	top: 15%;
+	width: 61%;
+	height: 70%;
+	left: 0%;
+	padding-left: 3%;
+	color: #CCCCCC;
+}
+
+.container {
+	height: 100%;
+	overflow: hidden;
+	text-overflow: hidden;
+}
+
+.menu {
+	background-color: #444444;
+	width: 100%;
+    text-align: center;
+}
+
+.sidebar {
+	position: absolute;
+	top: 15%;
+	width: 30%;
+	height: 70%;
+	left: 65%;
+	padding-right: 3%;
+	color: #999999;
+	font-size: 8pt;
+}
+
+.footer {
+	color: #333333;
+	background-color: #000000;
+	position: absolute;
+	height: 10%;
+	bottom: 0;
+	width: 99%;
+	text-align: center;
+	z-index: 10;
+}
