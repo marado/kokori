@@ -287,6 +287,9 @@ function getSection(section) {
 function sidebar() {
 	var html = "";
 
+	// indiegogo
+	html += indiegogo("metaphysical-circuits-3x-tape-compilation");
+
     // media stuff
     html += media();
 
@@ -319,13 +322,17 @@ function flickr() {
 
 function media() {
 	// bandcamp (note, this is *still* flash-only)
-	return bandcamp();
+	// return bandcamp();
 	// we can choose what we want to be highlightning
 	// return youtube();
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
-    // return soundcloud();
+    return soundcloud();
+}
+
+function indiegogo(campaign) {
+	return "<div align='center'><iframe src='https://www.indiegogo.com/project/"+campaign+"/embedded' width='222px' height='445px' frameborder='0' scrolling='no'></iframe></div>";
 }
 
 function youtube() {
