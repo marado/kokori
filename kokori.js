@@ -1,10 +1,13 @@
-/* This is the big bag of javascript for kokori's website. Yeah, it's ugly, it's called "improvisation", something we're at Kokori are used to. */
+/* This is the big bag of javascript for kokori's website. 
+ * Yeah, it's ugly, it's called "improvisation", something 
+ * we're at Kokori are used to. */
 
 /* ****************************************************************
  * js generic functions (should get their own class and js file...)
  * ****************************************************************/
 
-// DEBUG = true will give you debugging messages to firebug. If you don't use it, then this variable is useless to you until you change the "debug" function
+// DEBUG = true will give you debugging messages to firebug. 
+// If you don't use it, then this variable is useless to you until you change the "debug" function
 DEBUG = false;
 
 function debug(what) {
@@ -102,7 +105,8 @@ function processRSS(result, elem, bypass) {
 	// VERY VERY UGLY HACK TO DEAL WITH THE FACT THAT IE UTTERLY *SUCKS*
 	if(typeof(result[0]) != "object") result = [result];
 
-    // UGLY way of finding out how many news there are, specially 'cause we're going to cycle through result[0] again... TODO (fix this)
+    // UGLY way of finding out how many news there are, specially because 
+    // we're going to cycle through result[0] again... TODO (fix this)
     var length = 0;
     for (var i in result[0]) { if (typeof(result[0][i]) == "object") { length++; } }
 
@@ -160,7 +164,7 @@ function setElementContent(elem, html) {
 }
 
 /* ****************************************************************
- * site-specific functions (only these should be in this file... 
+ * site-specific functions (only these should be in this file...)
  * ****************************************************************/
 
 // initialize website
@@ -222,7 +226,7 @@ function shop() {
 	html += "<li>init() - EP - 2010/06 - sold out</li>";
 	html += "<li>make install - EP - 2013/07 - <a href=\"http://freemusicarchive.org/music/kokori/make_install/\">free download</a></li>";
 	html += "<li>Release Candid Hate - EP - 2013/08:";
-	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>7€</a></li></ul></li>";
+	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproachrecords.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
 	html += "</ul>";
 
