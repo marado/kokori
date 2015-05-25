@@ -288,10 +288,10 @@ function sidebar() {
 	var html = "";
 
 	// indiegogo
-	html += indiegogo("metaphysical-circuits-3x-tape-compilation");
+	// html += indiegogo("metaphysical-circuits-3x-tape-compilation");
 
-    // media stuff
-    html += media();
+    	// media stuff
+    	html += media();
 
 	// // separator
 	// html += separator();
@@ -322,13 +322,13 @@ function flickr() {
 
 function media() {
 	// bandcamp (note, this is *still* flash-only)
-	// return bandcamp();
+	return bandcamp();
 	// we can choose what we want to be highlightning
 	// return youtube();
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
-    return soundcloud();
+    	// return soundcloud();
 }
 
 function indiegogo(campaign) {
