@@ -293,11 +293,11 @@ function sidebar() {
     	// media stuff
     	html += media();
 
-	// // separator
-	// html += separator();
+	// separator
+	html += separator();
 
-	// // shop widget
-	// html += shopwidget();
+	// shop widget
+	html += shopwidget();
 
 	// flickr stuff, since we don't have any video yet (we should do one)
 	// html += flickr();
@@ -322,9 +322,9 @@ function flickr() {
 
 function media() {
 	// bandcamp (note, this is *still* flash-only)
-	return bandcamp();
+	// return bandcamp();
 	// we can choose what we want to be highlightning
-	// return youtube();
+	return youtube();
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
