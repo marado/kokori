@@ -226,7 +226,7 @@ function shop() {
 	html += "<li>init() - EP - 2010/06 - sold out</li>";
 	html += "<li>make install - EP - 2013/07 - <a href=\"http://freemusicarchive.org/music/kokori/make_install/\">free download</a></li>";
 	html += "<li>Release Candid Hate - EP - 2013/08:";
-	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproachrecords.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
+	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://crawlintoablackhole.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
 	html += "</ul>";
 
@@ -312,7 +312,7 @@ function separator() {
 
 function shopwidget() {
 	//return "<a href=\"http://freemusicarchive.org/music/kokori/make_install/\"><img style='width:80%;' src='http://userserve-ak.last.fm/serve/_/91291027/make+install+00_kokori__make_install.png' alt='Kokori - make install'/></a>";
-	return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://newapproachrecords.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
+	return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://crawlintoablackhole.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
 }
 
 // we're basically calling an iframe with the thingie. I should fix this (TODO) and use their API and build a propper widget since there isn't one *gasp*...
@@ -328,7 +328,7 @@ function media() {
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
-    	// return soundcloud();
+	// return soundcloud();
 }
 
 function indiegogo(campaign) {
