@@ -180,7 +180,7 @@ function container(section) {
 }
 
 function about() {
-	return "<p/>Kokori is a Portuguese Post-CyberPunk Industrial project created in 2009 by the members of <a href='http://merankorii.grogue.org'>Merankorii</a> and <a href='http://pluskopluskoplus.grogue.org'>+ko+ko+</a>.<p/>They don't aim to conquer the world or any such nonsense, only to be the best band you've ever heard.<div align='center' style='font-size:8pt;color:#666666;'>picture taken by cisg (c) 2013<img src='DSC_0781_edit-600.jpg' alt='Kokori picture'/>";
+	return "<p/>Kokori is a Portuguese Post-CyberPunk Industrial project created in 2009 by the members of <a href='http://merankorii.grogue.org'>Merankorii</a> and <a href='http://pluskopluskoplus.grogue.org'>+ko+ko+</a>.<p/>They don't aim to conquer the world or any such nonsense, only to be the best band you've ever heard.<div align='center' style='font-size:8pt;color:#666666;'>picture taken by cisg (c) 2013<br/><img src='DSC_0781_edit-600.jpg' alt='Kokori picture'/>";
 }
 
 function discog() {
