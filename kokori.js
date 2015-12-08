@@ -187,7 +187,7 @@ function discog() {
 	// var html = "<img style='float:right;padding:1em;width:40%;overflow:hidden;' src='http://farm2.staticflickr.com/1297/4703233977_678622feee_m.jpg' alt='Kokori - init()'/>";
 	var html = "<div style='float:right;padding:1em;overflow:hidden;'>";
 	html += "<img width='130px' src='http://farm2.staticflickr.com/1297/4703233977_678622feee_m.jpg' alt='Kokori - init()'/><br/>";
-	html += "<img width='130px' src='http://userserve-ak.last.fm/serve/_/91291027/make+install+00_kokori__make_install.png' alt='Kokori - make install'/><br/>";
+	html += "<img width='130px' src='make_install.png' alt='Kokori - make install'/><br/>";
 	html += "<img width='130px' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=130&h=130' alt='Kokori - Release Candid Hate'/><br/>";
 	html += "<img width='130px' src='http://f1.bcbits.com/img/a3272876761_7.jpg' alt='Kokori - Desert Moon / First Egg'/>";
 	html += "</div>";
@@ -312,7 +312,7 @@ function separator() {
 }
 
 function shopwidget() {
-	//return "<a href=\"http://freemusicarchive.org/music/kokori/make_install/\"><img style='width:80%;' src='http://userserve-ak.last.fm/serve/_/91291027/make+install+00_kokori__make_install.png' alt='Kokori - make install'/></a>";
+	//return "<a href=\"http://freemusicarchive.org/music/kokori/make_install/\"><img style='width:80%;' src='make_install.png' alt='Kokori - make install'/></a>";
 	return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://crawlintoablackhole.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
 }
 
