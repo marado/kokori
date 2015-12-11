@@ -226,7 +226,7 @@ function shop() {
 	html += "<li>init() - EP - 2010/06 - sold out</li>";
 	html += "<li>make install - EP - 2013/07 - <a href=\"http://freemusicarchive.org/music/kokori/make_install/\">free download</a></li>";
 	html += "<li>Release Candid Hate - EP - 2013/08:";
-	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://crawlintoablackhole.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
+	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
 	html += "</ul>";
 
@@ -236,7 +236,7 @@ function shop() {
 	html += "<li>Necktar + Necktar 2017 - DVD - 2011 - sold out</li>";
 	html += "<li>Icaro I: First Compilation - 3CD - 2011 - sold out</li>";
 	html += "<li>Bearded Snails - 3CD - 2012 - <a href=\"http://abeardofsnails.storenvy.com/products/5204081-v-a-bearded-snails-3x-3\">available on label's shop</a></li>";
-	html += "<li>400/100 - 3CS - 2015 - <a href=\"http://metaphysicalcircuits.bandcamp.com/album/400-100\">available on tape or digitally</a></li>";
+	html += "<li>400/100 - 3CS - 2015 - <!--<a href=\"http://metaphysicalcircuits.bandcamp.com/album/400-100\">available on tape or digitally</a>//-->sold out</li>";
 	html += "</ul>";
 
 	html += "<h3>Mixtapes</h3><ul>";
@@ -295,10 +295,10 @@ function sidebar() {
 	html += media();
 
 	// separator
-	// html += separator();
+	html += separator();
 
 	// shop widget
-	// html += shopwidget();
+	html += shopwidget();
 
 	// flickr stuff, since we don't have any video yet (we should do one)
 	// html += flickr();
@@ -313,7 +313,7 @@ function separator() {
 
 function shopwidget() {
 	//return "<a href=\"http://freemusicarchive.org/music/kokori/make_install/\"><img style='width:80%;' src='make_install.png' alt='Kokori - make install'/></a>";
-	return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://crawlintoablackhole.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
+	return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
 }
 
 // we're basically calling an iframe with the thingie. I should fix this (TODO) and use their API and build a propper widget since there isn't one *gasp*...
@@ -323,9 +323,9 @@ function flickr() {
 
 function media() {
 	// bandcamp (note, this is *still* flash-only)
-	return bandcamp();
+	// return bandcamp();
 	// we can choose what we want to be highlightning
-	// return youtube();
+	return youtube();
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
