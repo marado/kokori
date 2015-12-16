@@ -329,7 +329,7 @@ function shopwidget() {
 	html = "<div style='padding-left:25px;'>";
 	// without media:
 	// html += "<img style='width:70%;' src='rootkit.png' alt='Kokori - Rootkit'/><br/>";
-	html += "full-length album:$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--tape_and_digital=[£6.5]</a> || <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£3]</a></div>";
+	html += "~/album$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--tape=[£6.5]</a> || <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£3]</a></div>";
 	return html;
 }
 
