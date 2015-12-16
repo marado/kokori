@@ -184,15 +184,8 @@ function about() {
 }
 
 function discog() {
-	// var html = "<img style='float:right;padding:1em;width:40%;overflow:hidden;' src='http://farm2.staticflickr.com/1297/4703233977_678622feee_m.jpg' alt='Kokori - init()'/>";
-	var html = "<div style='float:right;padding:1em;overflow:hidden;'>";
-	html += "<img width='130px' src='http://farm2.staticflickr.com/1297/4703233977_678622feee_m.jpg' alt='Kokori - init()'/><br/>";
-	html += "<img width='130px' src='make_install.png' alt='Kokori - make install'/><br/>";
-	html += "<img width='130px' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=130&h=130' alt='Kokori - Release Candid Hate'/><br/>";
-	html += "<img width='130px' src='http://f1.bcbits.com/img/a3272876761_7.jpg' alt='Kokori - Desert Moon / First Egg'/>";
-	html += "</div>";
-	html += "<p/>";
-	
+	var html = "<br/>";
+
 	// html += "<h4>Singles & EPs</h4>";
 	html += "2010 was the year for Kokori's first release, the EP \"init()\", which is now sold-out.";
 	html += "<p/>";
@@ -201,12 +194,24 @@ function discog() {
 	html += "<p/>";
 	html += "In July 2013 that material took form of a new digital-only EP, \"make install\", which you can <a href=\"http://freemusicarchive.org/music/kokori/make_install/\">download for free</A>.<br/>This EP sums up an era, while installing the roots of great things to come...";
 	html += "<p/>";
-	html += "...and the instalation was fruitful, many bugs were fixed and the band was now ready for a \"Release Candid Hate\". This new EP, released in August 2013, marks the first time kokori does an heavy bet on vocals and lyrics, and is released in vinyl, with a two discs special edition for those who want all the bits.";
+	html += "...and the instalation was fruitful, many bugs were fixed and the band was now ready for a <a href='https://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>\"Release Candid Hate\"</a>. This new EP, released in August 2013, marks the first time kokori does an heavy bet on vocals and lyrics, and is released in vinyl, with a two discs special edition for those who want all the bits.";
 	html += "<p/>";
-	html += "In 2014 kokori released a single, \"Desert Moon / First Egg\", in a limited edition 7\" vinyl that soon sold out. But they're far from done yet, and are preparing more material for a release to come..."
+	html += "In 2014 kokori released a single, \"Desert Moon / First Egg\", in a limited edition 7\" vinyl that soon sold out. But they're were far from done yet, and preparing more material for..."
+	html += "<p/>"
+	html += "<a href='http://artapes.co.uk/product/kokori-rootkit/'>Rootkit</a>, kokori's full album, has been finally announced, and released in January 2016.";
 	html += "<p/>";
 	// html += "<h4>Other</h4>";
 	html += "You can see kokori's complete discography <a href='http://www.discogs.com/artist/Kokori'>here</a>.";
+
+	// covers bar
+	html += "<div align='center' style='padding:1em'>";
+	html += "<img width='130px' src='http://farm2.staticflickr.com/1297/4703233977_678622feee_m.jpg' alt='Kokori - init()'/>";
+	html += "<img width='130px' src='make_install.png' alt='Kokori - make install'/>";
+	html += "<img width='130px' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=130&h=130' alt='Kokori - Release Candid Hate'/>";
+	html += "<img width='130px' src='http://f1.bcbits.com/img/a3272876761_7.jpg' alt='Kokori - Desert Moon / First Egg'/>";
+	html += "<img width='130px' src='rootkit.png' alt='Kokori - Rootkit'/>";
+	html += "</div>";
+	html += "<p/>";
 
 	return html;
 }
@@ -228,6 +233,8 @@ function shop() {
 	html += "<li>Release Candid Hate - EP - 2013/08:";
 	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
+	html += "<li>Rootkit - Album - 2016/01:";
+	html += "<ul><li>tape + digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£6.50</a></li><li>digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£3.00</a></li></ul></li>";
 	html += "</ul>";
 
 	html += "<h3>Selected Compilations</h3><ul>";
@@ -235,7 +242,7 @@ function shop() {
 	html += "<li>Now That's What I Call Retro-Futurism Vol. 1 - Floppy - 2010 - sold out</li>";
 	html += "<li>Necktar + Necktar 2017 - DVD - 2011 - sold out</li>";
 	html += "<li>Icaro I: First Compilation - 3CD - 2011 - sold out</li>";
-	html += "<li>Bearded Snails - 3CD - 2012 - <a href=\"http://abeardofsnails.storenvy.com/products/5204081-v-a-bearded-snails-3x-3\">available on label's shop</a></li>";
+	html += "<li>Bearded Snails - 3CD - 2012 - <a href=\"http://abeardofsnails.storenvy.com/products/5204081-v-a-bearded-snails-3x-3\">$3.00</a></li>";
 	html += "<li>400/100 - 3CS - 2015 - <!--<a href=\"http://metaphysicalcircuits.bandcamp.com/album/400-100\">available on tape or digitally</a>//-->sold out</li>";
 	html += "</ul>";
 
@@ -312,8 +319,18 @@ function separator() {
 }
 
 function shopwidget() {
+	// make install
 	//return "<a href=\"http://freemusicarchive.org/music/kokori/make_install/\"><img style='width:80%;' src='make_install.png' alt='Kokori - make install'/></a>";
-	return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
+
+	// Release Candid Hate
+	// return "<div style='padding-left:25px;'><img style='width:70%;' src='http://newapproachrecords.files.wordpress.com/2012/02/capa.jpg?w=300&h=300' alt='Kokori - Release Candid Hate'/><br/><a href='http://newapproachrecords.wordpress.com/vinyl/'>--special=[12 €]</a> || <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>--standard=[7 €]</a></div>";
+
+	// Rootkit
+	html = "<div style='padding-left:25px;'>";
+	// without media:
+	// html += "<img style='width:70%;' src='rootkit.png' alt='Kokori - Rootkit'/><br/>";
+	html += "full-length album:$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--tape_and_digital=[£6.5]</a> || <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£3]</a></div>";
+	return html;
 }
 
 // we're basically calling an iframe with the thingie. I should fix this (TODO) and use their API and build a propper widget since there isn't one *gasp*...
@@ -325,11 +342,11 @@ function media() {
 	// bandcamp (note, this is *still* flash-only)
 	// return bandcamp();
 	// we can choose what we want to be highlightning
-	return youtube();
+	// return youtube();
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
-	// return soundcloud();
+	return soundcloud();
 }
 
 function indiegogo(campaign) {
@@ -366,7 +383,10 @@ function bandcamp() {
 
 function soundcloud() {
 		// Mortal Kombat
-		return "<div style='height:80px;'><span>Mortal Kombat, a parody track made on a <a href='http://cabinetpin.com/20th/'>20th</a>. <a href='http://soundcloud.com/kokoript/terror-attack/download'>Download</a></span><object height='100%' width='100%'> <param name='movie' value='http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F9405883'></param> <param name='allowscriptaccess' value='always'></param> <embed allowscriptaccess='always' height='81' src='http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F9405883' type='application/x-shockwave-flash' width='100%'></embed></div>";
+		// return "<div style='height:80px;'><span>Mortal Kombat, a parody track made on a <a href='http://cabinetpin.com/20th/'>20th</a>. <a href='http://soundcloud.com/kokoript/terror-attack/download'>Download</a></span><object height='100%' width='100%'> <param name='movie' value='http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F9405883'></param> <param name='allowscriptaccess' value='always'></param> <embed allowscriptaccess='always' height='81' src='http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F9405883' type='application/x-shockwave-flash' width='100%'></embed></div>";
+
+		// Ashcending (Rootkit)
+		return "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237718420&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'></iframe>";
 }
 
 // we must have a news.rss, and this function is basicly an rss reader, reading that rss...
