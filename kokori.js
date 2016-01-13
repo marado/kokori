@@ -234,7 +234,7 @@ function shop() {
 	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
 	html += "<li>Rootkit - Album - 2016/01:";
-	html += "<ul><li>tape + digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£6.50</a></li><li>digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£3.00</a></li></ul></li>";
+	html += "<ul><li>tape + digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£8</a></li><li>digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£5</a></li></ul></li>";
 	html += "</ul>";
 
 	html += "<h3>Selected Compilations</h3><ul>";
@@ -329,7 +329,7 @@ function shopwidget() {
 	html = "<div style='padding-left:25px;'>";
 	// without media:
 	// html += "<img style='width:70%;' src='rootkit.png' alt='Kokori - Rootkit'/><br/>";
-	html += "~/album$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--tape=[£6.5]</a> || <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£3]</a></div>";
+	html += "~/album$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--tape=[£8]</a> || <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£5]</a></div>";
 	return html;
 }
 
