@@ -234,7 +234,7 @@ function shop() {
 	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
 	html += "<li>Rootkit - Album - 2016/01:";
-	html += "<ul><li>tape + digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£8.5</a></li><li>digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£3</a></li></ul></li>";
+	html += "<ul><li>tape + digital: sold out</li><li>digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£5</a></li></ul></li>";
 	html += "</ul>";
 
 	html += "<h3>Selected Compilations</h3><ul>";
@@ -242,13 +242,14 @@ function shop() {
 	html += "<li>Now That's What I Call Retro-Futurism Vol. 1 - Floppy - 2010 - sold out</li>";
 	html += "<li>Necktar + Necktar 2017 - DVD - 2011 - sold out</li>";
 	html += "<li>Icaro I: First Compilation - 3CD - 2011 - sold out</li>";
-	html += "<li>Bearded Snails - 3CD - 2012 - <a href=\"http://abeardofsnails.storenvy.com/products/5204081-v-a-bearded-snails-3x-3\">$3.00</a></li>";
+	html += "<li>Bearded Snails - 3CD - 2012 - sold out</li>";
 	html += "<li>400/100 - 3CS - 2015 - <!--<a href=\"http://metaphysicalcircuits.bandcamp.com/album/400-100\">available on tape or digitally</a>//-->sold out</li>";
+	html += "<li>Passo a Passo - digital - 2016 - <a href='http://anti-demos-cracia.bandcamp.com/album/passo-a-passo-est-ticas-sonoras'>free download</a></li>";
 	html += "</ul>";
 
-	html += "<h3>Mixtapes</h3><ul>";
-	html += "<li>99 Anonymous Mixtape 4 - digital only - 2012 - <a href=\"http://archive.org/details/enrmix15_99_anonymous_mixtape_4\">free download</a></li>";
-	html += "</ul>";
+	//html += "<h3>Mixtapes</h3><ul>";
+	//html += "<li>99 Anonymous Mixtape 4 - digital only - 2012 - <a href=\"http://archive.org/details/enrmix15_99_anonymous_mixtape_4\">free download</a></li>";
+	//html += "</ul>";
 
 	//html += "<h3>Side-Projects</h3><ul>";
 	//html += "<li>+ko+ko+ - A Path To Nowhere - CD - 2011 (mastered by Merankorii) - <a href='http://www.discogs.com/buy/CD/koko-A-Path-To-Nowhere/49373296?ev=bp_titl'>10€</a></li>"
@@ -305,7 +306,7 @@ function sidebar() {
 	html += separator();
 
 	// shop widget
-	html += shopwidget();
+	// html += shopwidget();
 
 	// flickr stuff, since we don't have any video yet (we should do one)
 	// html += flickr();
@@ -328,8 +329,8 @@ function shopwidget() {
 	// Rootkit
 	html = "<div style='padding-left:25px;'>";
 	// without media:
-	// html += "<img style='width:70%;' src='rootkit.png' alt='Kokori - Rootkit'/><br/>";
-	html += "~/album$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--tape=[£8.5]</a> || <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£3]</a></div>";
+	html += "<img style='width:70%;' src='rootkit.png' alt='Kokori - Rootkit'/><br/>";
+	html += "~/album$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£5]</a></div>";
 	return html;
 }
 
@@ -340,13 +341,13 @@ function flickr() {
 
 function media() {
 	// bandcamp (note, this is *still* flash-only)
-	// return bandcamp();
+	return bandcamp();
 	// we can choose what we want to be highlightning
 	// return youtube();
 	// return archiveorg();	
 	// return fma();
 	// soundcloud
-	return soundcloud();
+	// return soundcloud();
 }
 
 function indiegogo(campaign) {
@@ -368,8 +369,11 @@ function fma() {
 }
 
 function bandcamp() {
+	// The Sky Is Concrete, The Stars Are Bullet Holes
+	return "<iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"http://bandcamp.com/EmbeddedPlayer/album=3154648288/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/track=2245147129/transparent=true/\" seamless><a href=\"http://anti-demos-cracia.bandcamp.com/album/passo-a-passo-est-ticas-sonoras\">PASSO a PASSO  estéticas sonoras by V/A  ANTI-DEMOS-CRACIA</a></iframe>";
+
 	// The Prisioner
-	return "<iframe style='border: 0; width: 350px; height: 522px;' src='https://bandcamp.com/EmbeddedPlayer/album=932200490/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/track=3264700674/transparent=true/' seamless><a href='http://metaphysicalcircuits.bandcamp.com/album/400-100'>400/100 by Kokori</a></iframe>";
+	// return "<iframe style='border: 0; width: 350px; height: 522px;' src='https://bandcamp.com/EmbeddedPlayer/album=932200490/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/track=3264700674/transparent=true/' seamless><a href='http://metaphysicalcircuits.bandcamp.com/album/400-100'>400/100 by Kokori</a></iframe>";
 
 	// Desert Moon / First Egg
 	// return "<iframe style='border: 0; width: 350px; height: 522px;' src='http://bandcamp.com/EmbeddedPlayer/album=1827714063/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/' seamless><a href='http://abeardofsnails.bandcamp.com/album/desert-moon-first-egg'>Desert Moon / First Egg by Kokori</a></iframe>";
