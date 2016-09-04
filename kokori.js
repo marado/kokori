@@ -194,11 +194,11 @@ function discog() {
 	html += "<p/>";
 	html += "In July 2013 that material took form of a new digital-only EP, \"make install\", which you can <a href=\"http://freemusicarchive.org/music/kokori/make_install/\">download for free</A>.<br/>This EP sums up an era, while installing the roots of great things to come...";
 	html += "<p/>";
-	html += "...and the instalation was fruitful, many bugs were fixed and the band was now ready for a <a href='https://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>\"Release Candid Hate\"</a>. This new EP, released in August 2013, marks the first time kokori does an heavy bet on vocals and lyrics, and is released in vinyl, with a two discs special edition for those who want all the bits.";
+	html += "...and the instalation was fruitful, many bugs were fixed and the band was now ready for a <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate-7-lathe-cut-special-edition'>\"Release Candid Hate\"</a>. This new EP, released in August 2013, marks the first time kokori does an heavy bet on vocals and lyrics, and is released in vinyl, with a two discs special edition for those who want all the bits.";
 	html += "<p/>";
 	html += "In 2014 kokori released a single, \"Desert Moon / First Egg\", in a limited edition 7\" vinyl that soon sold out. But they're were far from done yet, and preparing more material for..."
 	html += "<p/>"
-	html += "<a href='http://artapes.co.uk/product/kokori-rootkit/'>Rootkit</a>, kokori's full album, has been finally announced, and released in January 2016.";
+	html += "<strong>Rootkit</strong>, kokori's full album, has been finally announced, and released in January 2016.";
 	html += "<p/>";
 	// html += "<h4>Other</h4>";
 	html += "You can see kokori's complete discography <a href='http://www.discogs.com/artist/Kokori'>here</a>.";
@@ -231,11 +231,9 @@ function shop() {
 	html += "<li>init() - EP - 2010/06 - sold out</li>";
 	html += "<li>make install - EP - 2013/07 - <a href=\"http://freemusicarchive.org/music/kokori/make_install/\">free download</a></li>";
 	html += "<li>Release Candid Hate - EP - 2013/08:";
-	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproachrecords.wordpress.com/kokori-release-candid-hate-7/'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
+	html += "<ul><li>special edition: 7\" + 5\" vinyl + download, 4 tracks: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate-7-lathe-cut-special-edition'>12€</a></li><li>standard edition: 7\" vinyl + download: <a href='http://newapproach.tictail.com/product/kokori-release-candid-hate'>7€</a></li></ul></li>";
 	html += "<li>Desert Moon / First Egg - Single - 2014/10 - sold out</li>";
-	html += "<li>Rootkit - Album - 2016/01:";
-	html += "<ul><li>tape + digital: sold out</li><li>digital: <a href='http://artapes.co.uk/product/kokori-rootkit/'>£5</a></li></ul></li>";
-	html += "</ul>";
+	html += "<li>Rootkit - Album - 2016/01 - sold out</li>";
 
 	html += "<h3>Selected Compilations</h3><ul>";
 	html += "<li>Basic Imprint - digital only - 2010 - <a href=\"http://archive.org/details/V.a.BasicImprintkopp.13\">free download</a></li>";
@@ -330,7 +328,6 @@ function shopwidget() {
 	html = "<div style='padding-left:25px;'>";
 	// without media:
 	html += "<img style='width:70%;' src='rootkit.png' alt='Kokori - Rootkit'/><br/>";
-	html += "~/album$ Rootkit <a href='http://artapes.co.uk/product/kokori-rootkit/'>--digital=[£5]</a></div>";
 	return html;
 }
 
