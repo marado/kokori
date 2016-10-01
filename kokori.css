@@ -14,6 +14,10 @@ a:hover {
     background-color: red;
 } 
 
+span:hover {
+    background-color: red;
+}
+
 img {
 	border: none;
 }
