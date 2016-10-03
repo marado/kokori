@@ -178,7 +178,7 @@ function container(section) {
 	var path = window.location.pathname.split("/");
 	var link = "";
 	if (!section) {
-		var section = section || path.splice(0, 1)[0] || "news";
+		section = section || path.splice(1, 1)[0] || "news";
 		link = path.join("/");
 	}
 	link = "/" + section + link;
