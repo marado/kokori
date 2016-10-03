@@ -9,6 +9,8 @@
 // DEBUG = true will give you debugging messages to firebug.
 // If you don't use it, then this variable is useless to you until you change the "debug" function
 DEBUG = false;
+BASE_URL = document.getElementsByTagName("base")[0].getAttribute("href");
+if (BASE_URL[BASE_URL.length - 1] !== "/") BASE_URL += "/";
 
 function debug(what) {
 	if (DEBUG) console.log(what);
@@ -175,13 +177,14 @@ function init() {
 
 // change what's displayed on container
 function container(section) {
-	var path = window.location.pathname.split("/");
+	var path = window.location.pathname.replace(BASE_URL, "").split("/");
 	var link = "";
+	if (path[0] !== "") path.unshift("");
 	if (!section) {
 		section = section || path.splice(1, 1)[0] || "news";
 		link = path.join("/");
 	}
-	link = "/" + section + link;
+	link = BASE_URL + section + link;
 	if (window.history) {
 		window.history.pushState({}, section, link);
 	}
@@ -272,8 +275,10 @@ function getSection(section) {
     switch (section) {
         case "news":
 			var newsId = 1;
-			if (window.location.pathname.split("/")[2]) {
-				newsId = window.location.pathname.split("/")[2];
+			var path = window.location.pathname.replace(BASE_URL, "").split("/");
+			if (path[0] !== "") path.unshift("");
+			if (path[2]) {
+				newsId = path[2];
 			}
             html = news(newsId);
             break;
@@ -407,8 +412,8 @@ function soundcloud() {
 function news(which) {
     debug("news: which is " + which);
 	if (window.history) {
-		window.history.pushState({}, "news article #" + which, "/news/" + which);
+		window.history.pushState({}, "news article #" + which, BASE_URL + "news/" + which);
 	}
-	setTimeout("loadRSS('/news.rss','news-rss',"+which+")",10); // IE is a friggin piece of shite. I should rewrite this.
+	setTimeout("loadRSS('" + BASE_URL + "news.rss','news-rss',"+which+")",10); // IE is a friggin piece of shite. I should rewrite this.
     return "<div id='news-rss'></div>";
 }
