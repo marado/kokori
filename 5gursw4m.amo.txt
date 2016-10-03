@@ -1,0 +1,46 @@
+﻿Refactored everything
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Mon Oct 3 21:23:00 2016 +0200
+#
+# On branch gh-pages
+# Your branch is up-to-date with 'origin/gh-pages'.
+#
+# Changes to be committed:
+#	new file:   .gitattributes
+#	new file:   .gitignore
+#	modified:   404.html
+#	modified:   LICENSE
+#	modified:   README.md
+#	modified:   favicon.ico
+#	modified:   flickr.html
+#	renamed:    DSC_0781_edit-600.jpg -> images/DSC_0781_edit-600.jpg
+#	renamed:    bg.png -> images/bg.png
+#	renamed:    kokori-background.png -> images/kokori-background.png
+#	renamed:    make_install.png -> images/make_install.png
+#	renamed:    rootkit.png -> images/rootkit.png
+#	renamed:    rss.png -> images/rss.png
+#	deleted:    index.html
+#	new file:   js/bootstrap.js
+#	new file:   js/handlebars-v4.0.5.js
+#	new file:   js/handlebars.runtime-v4.0.5.js
+#	new file:   js/kokori.js
+#	new file:   js/utils.js
+#	deleted:    kokori.js
+#	modified:   news.rss
+#	modified:   server.py
+#	renamed:    kokori.css -> styles/kokori.css
+#	new file:   templates/404.html
+#	new file:   templates/about.html
+#	new file:   templates/bandcamp.html
+#	new file:   templates/basebody.html
+#	new file:   templates/contact.html
+#	new file:   templates/discography.html
+#	new file:   templates/events.html
+#	new file:   templates/item.hbs
+#	new file:   templates/list.hbs
+#	new file:   templates/shop.html
+#
+
