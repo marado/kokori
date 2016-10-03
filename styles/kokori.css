@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    background-image:url('bg.png');
+    background-image:url('../images/bg.png');
 	font-family: "Courier New", Courier, monospace;
     color: #FFFFFF;
 }
