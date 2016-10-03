@@ -10,8 +10,8 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
        parsedParams = urlparse.urlparse(self.path)
 
        # See if the file requested exists
-       print "requested", '.' + os.sep + parsedParams.path
-       if os.access('.' + os.sep + parsedParams.path, os.R_OK):
+       print "Requested ", '.' + parsedParams.path
+       if os.access('.' + parsedParams.path, os.R_OK):
           # File exists, serve it up
           SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self);
        else:
