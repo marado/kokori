@@ -1,12 +1,12 @@
-/* This is the big bag of javascript for kokori's website. 
- * Yeah, it's ugly, it's called "improvisation", something 
+/* This is the big bag of javascript for kokori's website.
+ * Yeah, it's ugly, it's called "improvisation", something
  * we're at Kokori are used to. */
 
 /* ****************************************************************
  * js generic functions (should get their own class and js file...)
  * ****************************************************************/
 
-// DEBUG = true will give you debugging messages to firebug. 
+// DEBUG = true will give you debugging messages to firebug.
 // If you don't use it, then this variable is useless to you until you change the "debug" function
 DEBUG = false;
 
@@ -19,7 +19,7 @@ function ajaxRequest() {
     var activexmodes=["Msxml2.XMLHTTP", "Microsoft.XMLHTTP"];   //activeX versions to check for in IE
 
     // Test for support for ActiveXObject in IE first (as XMLHttpRequest in IE7 is broken)
-    if (window.ActiveXObject) { 
+    if (window.ActiveXObject) {
         for (var i=0; i<activexmodes.length; i++){
             try{
                 return new ActiveXObject(activexmodes[i]);
@@ -53,7 +53,7 @@ function loadRSS(path, elem, which) {
         req.open("GET", path, true);
         req.send(null);
     } catch (e) {
-        // TODO 
+        // TODO
     }
 
 }
@@ -105,7 +105,7 @@ function processRSS(result, elem, bypass) {
 	// VERY VERY UGLY HACK TO DEAL WITH THE FACT THAT IE UTTERLY *SUCKS*
 	if(typeof(result[0]) != "object") result = [result];
 
-    // UGLY way of finding out how many news there are, specially because 
+    // UGLY way of finding out how many news there are, specially because
     // we're going to cycle through result[0] again... TODO (fix this)
     var length = 0;
     for (var i in result[0]) { if (typeof(result[0][i]) == "object") { length++; } }
@@ -128,7 +128,7 @@ function showRSS(what, where, which, total) {
     // what[1] is content
     // what[2] is link
     // what[3] is timestmp
-    
+
     //var html = "Title: " + what[0] + "<br/>Date: " + what[4] + "<p/>"+what[3];
     var html = "<p/><a href='"+what[2]+"'>"+what[0]+"</a><p/>"+what[1]+"<p/><div class='timestamp'>"+what[3]+"</div>";
 
@@ -175,8 +175,17 @@ function init() {
 
 // change what's displayed on container
 function container(section) {
-	if (section == undefined) section = "news";
-	return setElementContent("container", getSection(section));	
+	var path = window.location.pathname.split("/");
+	var link = "";
+	if (!section) {
+		var section = section || path.splice(0, 1)[0] || "news";
+		link = path.join("/");
+	}
+	link = "/" + section + link;
+	if (window.history) {
+		window.history.pushState({}, section, link);
+	}
+	return setElementContent("container", getSection(section));
 }
 
 function about() {
@@ -262,7 +271,11 @@ function getSection(section) {
 
     switch (section) {
         case "news":
-            html = news(1);
+			var newsId = 1;
+			if (window.location.pathname.split("/")[2]) {
+				newsId = window.location.pathname.split("/")[2];
+			}
+            html = news(newsId);
             break;
 		case "about":
 			html = about();
@@ -341,7 +354,7 @@ function media() {
 	return bandcamp();
 	// we can choose what we want to be highlightning
 	// return youtube();
-	// return archiveorg();	
+	// return archiveorg();
 	// return fma();
 	// soundcloud
 	// return soundcloud();
@@ -393,6 +406,9 @@ function soundcloud() {
 // we must have a news.rss, and this function is basicly an rss reader, reading that rss...
 function news(which) {
     debug("news: which is " + which);
-	setTimeout("loadRSS('news.rss','news-rss',"+which+")",10); // IE is a friggin piece of shite. I should rewrite this.
+	if (window.history) {
+		window.history.pushState({}, "news article #" + which, "/news/" + which);
+	}
+	setTimeout("loadRSS('/news.rss','news-rss',"+which+")",10); // IE is a friggin piece of shite. I should rewrite this.
     return "<div id='news-rss'></div>";
 }
