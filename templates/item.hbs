@@ -1,0 +1,14 @@
+<p><a href="{{item.link}}">{{item.title}}</a></p>
+<p>{{{item.description}}}</p>
+<p><span class="timestamp">{{item.pubDate}}</span></p>
+
+{{#if previous}}
+    <div class="link" style="float: left">
+        <a onclick="loadContent('news/{{previous}}')">&lt; recent</a>
+    </div>
+{{/if}}
+{{#if next}}
+    <div class="link" style="float: right">
+        <a onclick="loadContent('news/{{next}}')">older &gt;</a>
+    </div>
+{{/if}}
