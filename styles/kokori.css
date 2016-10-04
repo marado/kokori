@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    background-image:url('bg.png');
+    background-image:url('../images/bg.png');
 	font-family: "Courier New", Courier, monospace;
     color: #FFFFFF;
 }
@@ -12,11 +12,6 @@ a {
 
 a:hover {
     color: black;
-    background-color: red;
-}
-
-span:hover {
-    cursor: pointer;
     background-color: red;
 }
 
@@ -61,7 +56,12 @@ img {
 .menu {
 	background-color: #444444;
 	width: 100%;
-    text-align: center;
+	text-align: center;
+}
+
+.menu span:hover {
+	cursor: pointer;
+	background-color: red;
 }
 
 .sidebar {
