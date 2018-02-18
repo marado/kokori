@@ -9,7 +9,7 @@ var _loadScript = function(link, callback) {
     document.head.appendChild(script);
 };
 
-_loadScript("js/handlebars-v4.0.10.js", function() {
+_loadScript("js/handlebars-v4.0.5.js", function() {
     _loadScript("js/utils.js", function() {
         utils.loadTemplate("basebody.html", function(response) {
             document.getElementById("app").innerHTML = response.html;
