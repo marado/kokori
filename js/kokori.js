@@ -30,6 +30,7 @@ function processRSSNode(node) {
 		title: processRSSInformationNode(node, "title"),
 		description: processRSSInformationNode(node, "description"),
 		pubDate: processRSSInformationNode(node, "pubDate"),
+		link: processRSSInformationNode(node, "link"),
 	}
 }
 
