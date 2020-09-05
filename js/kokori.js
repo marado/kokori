@@ -73,9 +73,7 @@ mainContentElement = document.getElementById("maincontent");
 // initialize website
 function init() {
 	loadContent();
-	utils.loadTemplate("bandcamp.html", function(data) {
-		document.getElementById("sidebar").innerHTML = data.html;
-	})
+	loadSidebar();
 }
 
 function normalizeSection(section) {
@@ -118,6 +116,13 @@ function loadContent(section) {
 			trigger404();
 		}
 	}
+}
+
+function loadSidebar() {
+	var template = "bandcamp.html";
+	utils.loadTemplate(template, function(data) {
+		document.getElementById("sidebar").innerHTML = data.html;
+	});
 }
 
 function handleRSSRequest(link, callback) {
