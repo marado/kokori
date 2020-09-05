@@ -119,7 +119,8 @@ function loadContent(section) {
 }
 
 function loadSidebar() {
-	var template = "bandcamp.html";
+	// var template = "bandcamp.html";
+	var template = "youtube.html";
 	utils.loadTemplate(template, function(data) {
 		document.getElementById("sidebar").innerHTML = data.html;
 	});
