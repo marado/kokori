@@ -40,12 +40,17 @@ function processRSS(result, callback) {
 		list: Array.prototype.slice.apply(result.documentElement.querySelectorAll("item")).map(processRSSNode),
 		permalinks: [],
 		map: {},
+		recentmap: {},
 	};
+	var recent = 14; // how many items do we want to be considered recent?
+	var counter = 0;
 	data.list.forEach(function(item, index) {
+		counter++;
 		var permalink = utils.generatePermalink(item);
 		data.permalinks[index] = permalink;
 		data.map[permalink] = item;
 		data.map[permalink].permalink = permalink;
+		if (counter <= recent) data.recentmap[permalink] = data.map[permalink];
 	});
 	callback(data);
 }
@@ -132,7 +137,7 @@ function handleRSSRequest(link, callback) {
 	loadRSS("news.rss", function(data) {
 		if (!post) {
 			utils.loadTemplate("list.hbs", function(res) {
-				mainContentElement.innerHTML = Handlebars.compile(res.html)({items: data.map});
+				mainContentElement.innerHTML = Handlebars.compile(res.html)({items: data.recentmap});
 			});
 		} else {
 			var index = data.permalinks.indexOf(post);
