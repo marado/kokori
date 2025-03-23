@@ -1,6 +1,6 @@
 <ul class="items">
     {{#each items}}
-        <li><a onclick="loadContent('news/{{this.permalink}}')">{{this.title}}</a></li>
+        <li>{{this.pubDate}} <a onclick="loadContent('news/{{this.permalink}}')">{{this.title}}</a></li>
     {{else}}
         <p>No Items</p>
     {{/each}}
