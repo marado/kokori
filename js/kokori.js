@@ -139,6 +139,16 @@ function handleRSSRequest(link, callback) {
 			utils.loadTemplate("list.hbs", function(res) {
 				mainContentElement.innerHTML = Handlebars.compile(res.html)({items: data.recentmap});
 			});
+		} else if (post.length === 4) {
+			utils.loadTemplate("list.hbs", function(res) {
+				var yearmap = {};
+				for (var item in data.map) {
+					if (post === new Date(data.map[item].pubDate).getFullYear().toString()) {
+						yearmap[item] = data.map[item];
+					}
+				}
+				mainContentElement.innerHTML = Handlebars.compile(res.html)({items: yearmap});
+			});
 		} else {
 			var index = data.permalinks.indexOf(post);
 			if (index < 0) {
